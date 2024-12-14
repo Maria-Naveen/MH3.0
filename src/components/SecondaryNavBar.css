@@ -1,0 +1,31 @@
+.container {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  width: 16%;
+  height: 100vh;
+  background: #fafafa;
+  margin-top: 1.5em;
+  padding: 0.5em;
+  font-family: Inter;
+}
+
+#consent-header {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 0.75em;
+}
+
+.items {
+  display: flex;
+  gap: 0.5em;
+  margin-bottom: 1.5em;
+  width: 60px;
+  height: 20px;
+  padding: 0.5em;
+}
+
+.items > img {
+  width: 20px;
+  height: 20px;
+}

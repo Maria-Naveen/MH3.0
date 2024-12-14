@@ -1,0 +1,26 @@
+#navbar {
+  background-color: #000342;
+  color: #d9d9dd;
+  text-align: center;
+  width: 5%;
+  height: 100vh;
+  padding-top: 2em;
+}
+
+.navItems {
+  list-style-type: none;
+  font-size: 10px;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 12.1px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  cursor: pointer;
+}
+
+.navItems > img {
+  width: 42px;
+  height: 42px;
+}
