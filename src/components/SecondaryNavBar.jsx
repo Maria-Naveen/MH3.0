@@ -5,7 +5,7 @@ const SecondaryNavBar = () => {
       <p id="consent-header">Consent Manager</p>
       <div className="items">
         <img src="/demo.svg" alt="demo" />
-        <div>Demo</div>
+        <span>Demo</span>
       </div>
       <div className="items">
         <img src="/configuration.svg" alt="configurations" />

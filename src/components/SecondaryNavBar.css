@@ -3,28 +3,36 @@
   top: 0;
   left: 5%;
   width: 16%;
+  min-width: 200px;
   height: 100vh;
+  border-right: 0.5px solid #0505521a;
   background: #fafafa;
-  margin-top: 1.5em;
-  padding: 0.5em;
+  padding: 1.75em 0.5em;
 }
 
 #consent-header {
+  width: 100%;
+  color: #050552;
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 0.75em;
 }
 
 .items {
-  display: flex;
-  gap: 0.5em;
-  margin-bottom: 1.5em;
-  width: 60px;
+  width: 126px;
   height: 20px;
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  justify-content: left;
+  align-items: center;
+  gap: 0.5em;
   padding: 0.5em;
+  margin-bottom: 0.75em;
+  font-family: Inter;
 }
 
-.items > img {
+.items img {
   width: 20px;
   height: 20px;
 }
