@@ -2,14 +2,16 @@ import React from "react";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import SecondaryNavBar from "./components/SecondaryNavBar";
-import ConsentForm from "./components/ConsentForm";
+import ConsentScreen from "./components/ConsentScreen";
+import InputForm from "./components/InputForm";
 
 const App = () => {
   return (
     <div>
       <NavBar></NavBar>
       <SecondaryNavBar></SecondaryNavBar>
-      <ConsentForm></ConsentForm>
+      {/* <ConsentScreen></ConsentScreen> */}
+      <InputForm></InputForm>
     </div>
   );
 };

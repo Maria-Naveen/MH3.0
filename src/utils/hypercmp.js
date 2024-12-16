@@ -7,7 +7,6 @@ class ConsentSDK {
   }
 
   async #post(endpoint, data) {
-    console.log(this.apiUrl);
     const res = await fetch(`${this.apiUrl}${endpoint}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },

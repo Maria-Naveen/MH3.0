@@ -1,0 +1,95 @@
+.outerBox {
+  position: absolute;
+  width: 39.375%;
+  height: 651px;
+  top: 64px;
+  left: 40%;
+  margin: 0 auto;
+  border-bottom: 1px solid #e6e6e6;
+  font-family: Inter;
+  box-shadow: 0px 8px 16px 0px #0000001f;
+}
+
+.headerBox {
+  display: flex;
+  gap: 20px;
+  padding: 1.5em 2em;
+  border-bottom: 1px solid #0505521a;
+}
+
+.headerBox div {
+  width: 80%;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#policyVersion {
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.mainBox {
+  padding: 1.5em 2.25em;
+}
+
+.main-item1 {
+  margin-bottom: 2.25em;
+}
+
+.main-item1 p,
+.main-item2 p {
+  color: rgba(5, 5, 82, 0.8);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.permissions label,
+.main-item2 span {
+  font-size: 14px;
+  color: rgba(5, 5, 82, 0.6);
+}
+
+.main-item1 p,
+.permissions div,
+.main-item2 p {
+  height: 21px;
+}
+
+.permissions {
+  margin: 12px 0;
+}
+
+.main-item2 {
+  margin-bottom: 10em;
+}
+
+.footerBox {
+  padding: 1.5em 2em;
+}
+
+.footerBox p {
+  margin-bottom: 20px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(65, 65, 65, 1);
+}
+
+.consentArea {
+  display: flex;
+  gap: 12px;
+}
+
+#denyBtn,
+#allowBtn {
+  width: 50%;
+  padding: 0.63em;
+  border: 1px solid #d9dbdd;
+  border-radius: 6px;
+}
+
+#allowBtn {
+  background: #554ef1;
+  color: rgba(255, 255, 255, 1);
+}

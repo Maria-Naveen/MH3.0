@@ -1,7 +1,7 @@
-import "./ConsentForm.css";
+import "./InputForm.css";
 import { useState } from "react";
 import { ConsentSDK } from "../utils/hypercmp.js";
-const ConsentForm = () => {
+const InputForm = () => {
   const [customerId, setCustomerId] = useState("");
   const [redirectURI, setRedirectURI] = useState("");
   const [policyVersion, setPolicyVersion] = useState("");
@@ -17,7 +17,7 @@ const ConsentForm = () => {
     try {
       const res = await sdk.requestConsent(
         customerId,
-        1,
+        undefined,
         redirectURI,
         policyVersion,
         "https://hyperverge.co/privacy-policy/",
@@ -25,14 +25,14 @@ const ConsentForm = () => {
         "100",
         scope
       );
-      console.log(res.link);
+      console.log(res);
     } catch (error) {
       console.log(error);
     }
   };
   return (
     <div className="box">
-      <h3>Enter Consent Details</h3>
+      <p>Enter Consent Details</p>
       <form onSubmit={handleSubmit}>
         <div className="item">
           <label htmlFor="customerId">Customer ID</label>
@@ -86,4 +86,4 @@ const ConsentForm = () => {
   );
 };
 
-export default ConsentForm;
+export default InputForm;
