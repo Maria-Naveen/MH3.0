@@ -1,5 +1,29 @@
 import "./ConsentScreen.css";
+import { ConsentSDK } from "../utils/hypercmp.js";
+import { useLocation } from "react-router-dom";
+
 const ConsentScreen = () => {
+  const location = useLocation();
+  const { customerId, redirectURI, policyVersion, purpose, scope } =
+    location.state;
+  const handleConsent = async () => {
+    const sdk = new ConsentSDK("/api/v1");
+    try {
+      const res = await sdk.requestConsent(
+        customerId,
+        undefined,
+        redirectURI,
+        policyVersion,
+        "https://hyperverge.co/privacy-policy/",
+        purpose,
+        "100",
+        scope
+      );
+      console.log(res.link);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className="outerBox">
       <div className="headerBox">
@@ -35,7 +59,9 @@ const ConsentScreen = () => {
         </p>
         <div className="consentArea">
           <button id="denyBtn">Deny</button>
-          <button id="allowBtn">Allow</button>
+          <button id="allowBtn" onClick={handleConsent}>
+            Allow
+          </button>
         </div>
       </div>
     </div>

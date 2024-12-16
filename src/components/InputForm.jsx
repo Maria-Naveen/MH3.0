@@ -1,6 +1,8 @@
 import "./InputForm.css";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ConsentSDK } from "../utils/hypercmp.js";
+import { use } from "react";
 const InputForm = () => {
   const [customerId, setCustomerId] = useState("");
   const [redirectURI, setRedirectURI] = useState("");
@@ -8,27 +10,42 @@ const InputForm = () => {
   const [purpose, setPurpose] = useState("");
   const [scope, setScope] = useState("");
 
+  const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(
       `${customerId}  ${redirectURI} ${policyVersion} ${purpose} ${scope}`
     );
-    const sdk = new ConsentSDK("/api/v1");
-    try {
-      const res = await sdk.requestConsent(
+    if (!customerId || !redirectURI || !policyVersion || !purpose || !scope) {
+      alert("Please fill all the details!");
+      return;
+    }
+    navigate("/consent-screen", {
+      state: {
         customerId,
-        undefined,
         redirectURI,
         policyVersion,
-        "https://hyperverge.co/privacy-policy/",
         purpose,
-        "100",
-        scope
-      );
-      console.log(res);
-    } catch (error) {
-      console.log(error);
-    }
+        scope,
+      },
+    });
+    // const sdk = new ConsentSDK("/api/v1");
+    // try {
+    //   const res = await sdk.requestConsent(
+    //     customerId,
+    //     undefined,
+    //     redirectURI,
+    //     policyVersion,
+    //     "https://hyperverge.co/privacy-policy/",
+    //     purpose,
+    //     "100",
+    //     scope
+    //   );
+    //   console.log(res);
+    // } catch (error) {
+    //   console.log(error);
+    // }
   };
   return (
     <div className="box">
